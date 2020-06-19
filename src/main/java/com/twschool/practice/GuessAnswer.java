@@ -5,12 +5,22 @@ public class GuessAnswer {
     private final int MAX_INPUT_TIMES = 6;
     private int count = MAX_INPUT_TIMES;
 
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    private String result;
+
     public GuessAnswer(Answer answer) {
         this.answer = answer;
     }
 
     public GuessStatus guess(String useranswer) {
-        String result = answer.check(useranswer);
+         result = answer.check(useranswer);
         decrease();
         if ("4A0B".equals(result)) {
             return GuessStatus.SUCCEED;

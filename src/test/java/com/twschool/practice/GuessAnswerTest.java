@@ -3,6 +3,8 @@ package com.twschool.practice;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class GuessAnswerTest {
     @Test
     public void should_return_status_SUCCEED_when_input_1234_given_answer_1234(){
@@ -46,6 +48,14 @@ public class GuessAnswerTest {
 
         //then
         Assert.assertEquals(GuessStatus.FIALED,guessStatus);
+    }
+
+    @Test
+    public void should_return_status_FALID_when_after_7_input_given_answer_1234(){
+     String result=RandomGenerate.generate();
+     System.out.println(Arrays.asList(result.split(" ")));
+        //then
+        Assert.assertEquals("1 2 3 4",result);
     }
 
 }

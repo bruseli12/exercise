@@ -14,5 +14,38 @@ public class GuessAnswerTest {
         //then
         Assert.assertEquals(GuessStatus.SUCCEED,guessStatus);
     }
+   @Test
+    public void should_return_status_SUCCEED_when_after_6_input_given_answer_1234(){
+        //given
+        Answer answer=new Answer("1 2 3 4");
+        GuessAnswer guessAnswer=new GuessAnswer(answer);
+        //when
+        guessAnswer.guess("1 2 3 5");
+        guessAnswer.guess("1 2 3 6");
+        guessAnswer.guess("1 2 3 7");
+        guessAnswer.guess("1 2 3 8");
+        guessAnswer.guess("1 2 3 9");
+        GuessStatus guessStatus=guessAnswer.guess("1 2 3 4");
+
+        //then
+        Assert.assertEquals(GuessStatus.SUCCEED,guessStatus);
+    }
+    @Test
+    public void should_return_status_FALID_when_after_6_input_given_answer_1234(){
+        //given
+        Answer answer=new Answer("1 2 3 4");
+        GuessAnswer guessAnswer=new GuessAnswer(answer);
+        //when
+        guessAnswer.guess("1 2 3 5");
+        guessAnswer.guess("1 2 3 6");
+        guessAnswer.guess("1 2 3 7");
+        guessAnswer.guess("1 2 3 8");
+        guessAnswer.guess("1 2 3 9");
+
+        GuessStatus guessStatus=guessAnswer.guess("1 2 6 8");
+
+        //then
+        Assert.assertEquals(GuessStatus.FIALED,guessStatus);
+    }
 
 }

@@ -18,8 +18,7 @@ public class MarsRover {
     public MarsPosition receive(String path) {
         int length = path.length();
         for (int i = 0; i < length; i++) {
-            System.out.println(initPosition.getDirection());
-            System.out.println((path.charAt(0)));
+
             if ("N".equals(initPosition.getDirection())&&'M'==path.charAt(i)) {
                 initPosition.setY(initPosition.getY() + 1);
                 continue;

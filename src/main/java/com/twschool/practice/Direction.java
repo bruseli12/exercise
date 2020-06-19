@@ -3,45 +3,45 @@ package com.twschool.practice;
 public enum Direction {
     E {
         @Override
-        public Enum turnleft() {
+        public Direction turnleft() {
             return N;
         }
 
         @Override
-        public Enum turnRight() {
+        public Direction turnRight() {
             return S;
         }
     },S {
         @Override
-        public Enum turnleft() {
-            return W;
-        }
-
-        @Override
-        public Enum turnRight() {
-            return null;
-        }
-    },W {
-        @Override
-        public Enum turnleft() {
-            return N;
-        }
-
-        @Override
-        public Enum turnRight() {
-            return null;
-        }
-    },N {
-        @Override
-        public Enum turnleft() {
+        public Direction turnleft() {
             return E;
         }
 
         @Override
-        public Enum turnRight() {
-            return null;
+        public Direction turnRight() {
+            return W;
+        }
+    },W {
+        @Override
+        public Direction turnleft() {
+            return S;
+        }
+
+        @Override
+        public Direction turnRight() {
+            return N;
+        }
+    },N {
+        @Override
+        public Direction turnleft() {
+            return W;
+        }
+
+        @Override
+        public Direction turnRight() {
+            return E;
         }
     };
-   public abstract Enum turnleft();
-   public  abstract Enum turnRight();
+   public abstract Direction turnleft();
+   public  abstract Direction turnRight();
 }

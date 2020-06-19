@@ -3,7 +3,7 @@ package com.twschool.practice;
 public class MarsPosition {
     private  int x;
     private  int y;
-    private  String direction;
+    private  Direction direction;
 
     public int getX() {
         return x;
@@ -21,15 +21,15 @@ public class MarsPosition {
         this.y = y;
     }
 
-    public String getDirection() {
+    public Direction getDirection() {
         return direction;
     }
 
-    public void setDirection(String direction) {
+    public void setDirection(Direction direction) {
         this.direction = direction;
     }
 
-    public MarsPosition(int x, int y, String direction) {
+    public MarsPosition(int x, int y, Direction direction) {
         this.x=x;
         this.y=y;
         this.direction=direction;

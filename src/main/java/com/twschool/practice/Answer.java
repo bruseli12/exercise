@@ -28,6 +28,7 @@ public class Answer {
         System.out.println(valueAndpositionCorrect);
         System.out.println(valueCorrectAndpositionIncorrect);
 
+
         return valueAndpositionCorrect+"A"+valueCorrectAndpositionIncorrect+"B";
     }
 }
